@@ -1,0 +1,16 @@
+syntax = "proto3";
+package protobuf;
+
+option go_package = ".;message";
+
+service MessageService {
+  rpc Get(Request) returns (Response);
+}
+
+message Request {
+  string name = 1;
+}
+
+message Response {
+  string message = 1;
+}
